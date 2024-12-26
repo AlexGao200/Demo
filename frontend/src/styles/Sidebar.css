@@ -1,0 +1,179 @@
+@import url('./AppColors.css');
+
+.sidebar {
+  background-color: var(--light-bg);
+  border-right: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+/* Open state for the sidebar */
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* Close button */
+.close-btn {
+  padding: 10px;
+  border: none;
+  background: none;
+  color: var(--light-text);
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  text-align: left;
+  transition: color 0.3s ease;
+  margin-left: 6px;
+}
+
+.close-btn:hover {
+  color: var(--primary-color);
+}
+
+/* Logo container styling */
+.logo-container {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+}
+
+/* Logo image styling */
+.sidebar-logo {
+  height: 50px;
+  width: auto;
+}
+
+/* User info at the top */
+.user-info {
+  padding: 10px;
+  font-size: 18px;
+  color: var(--light-text);
+  text-align: center;
+  margin-bottom: -15px;
+}
+
+/* Menu items */
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+  flex-grow: 1;
+}
+
+.sidebar ul li {
+  padding: 15px;
+  text-align: left;
+}
+
+.sidebar ul li a {
+  color: var(--light-text);
+  text-decoration: none;
+  font-size: 17px;
+  transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  color: var(--primary-color);
+}
+
+/* Theme toggle area */
+.theme-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  margin-top: auto;
+  background-color: var(--light-bg); /* Ensure this switches to dark mode */
+  width: 100%;
+  transition: background-color 0.3s ease; /* Add transition for smoother effect */
+}
+
+.theme-toggle button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+}
+
+/* Space between icon and text */
+.theme-icon {
+  color: var(--light-text);
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.theme-text {
+  font-size: 16px;
+}
+
+.theme-toggle button:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Light mode hover effect */
+}
+
+/* Dark mode styles */
+.sidebar.dark-mode {
+  background-color: var(--dark-bg); /* Ensure this switches to dark mode */
+  border-right-color: var(--dark-border-color);
+}
+
+/* Ensure all text inside the sidebar is white in dark mode */
+.sidebar.dark-mode ul li a {
+  color: var(--dark-text); /* White text in dark mode */
+}
+
+.sidebar.dark-mode ul li a:hover {
+  color: var(--primary-hover-color); /* Primary hover color in dark mode */
+}
+
+.sidebar.dark-mode .user-info {
+  color: var(--dark-text); /* White text for user info in dark mode */
+}
+
+/* Update the theme-toggle container background in dark mode */
+.sidebar.dark-mode .theme-toggle {
+  background-color: var(--dark-bg); /* Dark mode background for the theme toggle container */
+}
+
+.sidebar.dark-mode .theme-toggle button {
+  color: var(--dark-text); /* White text for theme toggle in dark mode */
+}
+
+.sidebar.dark-mode .theme-toggle button:hover {
+  background-color: rgba(255, 255, 255, 0.05); /* Dark mode hover effect */
+}
+
+.sidebar.dark-mode .close-btn {
+  color: var(--dark-text); /* White text for the close button in dark mode */
+}
+
+.sidebar.dark-mode .close-btn:hover {
+  color: var(--primary-hover-color); /* Hover color for close button in dark mode */
+}
+
+/* Sidebar icon for toggling */
+.sidebar-toggle-button img {
+  filter: invert(0); /* Default state for light mode */
+  transition: filter 0.3s ease;
+}
+
+/* Change color of the image in dark mode */
+.app-header.dark-mode .sidebar-toggle-button img {
+  filter: invert(1); /* Invert colors in dark mode */
+}

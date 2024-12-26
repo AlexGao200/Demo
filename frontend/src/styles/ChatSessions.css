@@ -1,0 +1,110 @@
+.chat-sessions-container {
+    padding: 10px 10px 10px 0px; /* Reduced left padding to zero */
+    background-color: #cecaca;
+    color: #333333;
+    overflow-y: auto;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    width: 250px; /* Adjusted fixed width */
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    font-size: 13px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.chat-sessions-container .header {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: -40px; /* Adjusted for smaller vertical separation */
+    color: #1A1A1A;
+    letter-spacing: -0.5px;
+    width: 100%; /* Ensure the header takes the full width of its container */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    padding-left: 15px; /* Add some left padding for better alignment */
+}
+
+.section-header {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 5px 0 5px; /* Adjusted for smaller vertical separation */
+    color: #1A1A1A;
+    letter-spacing: -0.5px;
+}
+
+.session-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Ensure no extra margin causing overflow */
+}
+
+.session-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+    cursor: pointer;
+    border: 1px solid transparent; /* Default border */
+    border-radius: 4px;
+    margin-bottom: 0px;
+    color: #4A4A4A;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Added border-color transition */
+    width: calc(100% - 20px); /* Ensure it doesn't cause horizontal overflow */
+    margin-left: 5px; /* Reduced left margin */
+    margin-right: 10px; /* Add margin to center items */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.session-item:hover {
+    border: 1px solid #E0E0E0; /* Border on hover */
+}
+
+.session-item.active {
+    border: 1px solid #E0E0E0; /* Border for active */
+}
+
+.session-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    word-break: break-word; /* Ensure words break properly */
+}
+
+.new-chat-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 20px); /* Ensure it doesn't cause horizontal overflow */
+    padding: 6px;
+    background-color: #e94128;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box; /* Include padding and border in width */
+    margin-left: 5px; /* Reduced left margin */
+    margin-right: 10px; /* Add margin to center button */
+}
+
+.plus-icon {
+    margin-right: 10px;
+}
+
+.arrow-icon {
+    color: #66B2FF;
+}
+
+[data-theme="dark"] .session-title {
+    color: #FFFFFF !important; /* Make chat titles white in dark mode */
+}

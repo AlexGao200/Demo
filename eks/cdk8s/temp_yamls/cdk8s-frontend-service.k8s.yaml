@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cdk8s-frontend-service-frontend-service-c8758d06
+spec:
+  ports:
+    - port: 80
+      targetPort: 3000
+  selector:
+    app: frontend
+  type: LoadBalancer

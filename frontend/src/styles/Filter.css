@@ -1,0 +1,187 @@
+/* modal.css */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modal-container {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1010;
+    animation: modal-fade-in 0.3s ease-out;
+}
+
+@keyframes modal-fade-in {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modal-header {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: transform 0.2s;
+}
+
+.modal-close:hover {
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.modal-button {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: var(--button-color);
+    border: 1px solid var(--button-border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-button:hover {
+    background-color: var(--button-hover-background);
+}
+
+.modal-input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.modal-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.modal-input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid var(--input-border-color);
+    width: 100%;
+    background-color: var(--input-background-color);
+    color: var(--input-text-color);
+    transition: border-color 0.3s ease;
+}
+
+.modal-input:focus {
+    outline: none;
+    border-color: var(--button-color);
+}
+
+
+/* Styles for removing bullet points in the modal list */
+.modal-list {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+
+.modal-list li {
+    margin: 10px 0; /* Optional: Adds some space between list items */
+}
+
+
+/* Additional styles for PublicFilter and related components */
+.filter-button {
+    padding: 10px;
+    background-color: var(--background-color);
+    border: 1px solid var(--button-border-color);
+    border-radius: 4px;
+    color: var(--text-color);
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.filter-button:hover {
+    background-color: var(--button-hover-background);
+}
+
+.filter-checkbox-label {
+    color: var(--text-color);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.filter-checkbox {
+    margin-right: 10px;
+}
+
+.filter-apply-button {
+    width: 30%;
+    padding: 5px;
+}
+
+/* Theme Variables */
+:root {
+    --background-color: #f5f5f5;
+    --text-color: #333;
+    --button-color: #212121;
+    --button-border-color: #212121;
+    --button-hover-background: #f0f0f0;
+    --input-border-color: #ccc;
+    --input-background-color: #fff;
+    --input-text-color: #333;
+}
+
+[data-theme="dark"] {
+    --background-color: #1a1a1a;
+    --text-color: #f5f5f5;
+    --button-color: #bb0000;
+    --button-border-color: #bb0000;
+    --button-hover-background: #333;
+    --input-border-color: #555;
+    --input-background-color: #333;
+    --input-text-color: #f5f5f5;
+}

@@ -1,0 +1,4 @@
+Strategy,Model,Answer Relevancy,Faithfulness,Contextual Relevancy
+text_only_segmentation_cohere,AnthropicProvider_claude-3-5-haiku-latest,1.0,1.0,0.6077733860342556
+text_only_segmentation_cohere,AnthropicProvider_claude-3-5-sonnet-latest,0.85,1.0,0.4875357418007146
+text_only_segmentation_cohere,AnthropicProvider_claude-3-opus-latest,0.9714285714285713,0.95,0.2411111111111111

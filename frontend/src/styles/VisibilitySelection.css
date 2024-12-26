@@ -1,0 +1,103 @@
+.visibility-selector-container {
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #FFFFFF;
+}
+
+.visibility-selector-header {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.visibility-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  background-color: transparent;
+}
+
+.visibility-list-item {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.visibility-list-item label {
+  font-size: 16px;
+}
+
+.visibility-select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background-color: white;
+}
+
+.navigation-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.navigation-buttons button:first-child {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.navigation-buttons button:last-child {
+  background-color: #007bff;
+  color: white;
+}
+
+.navigation-buttons button:hover {
+  opacity: 0.9;
+}
+
+/* Light theme styles */
+.light-theme .visibility-selector-container {
+  background-color: #F5F5F5;
+  color: #333;
+}
+
+.light-theme .visibility-list-item label {
+  color: #212121;
+}
+
+/* Dark theme styles */
+.dark-theme .visibility-selector-container {
+  background-color: #1A1A1A;
+  color: #F5F5F5;
+}
+
+.dark-theme .visibility-list-item label {
+  color: #F5F5F5;
+}
+
+.dark-theme .visibility-select {
+  background-color: #333;
+  color: #F5F5F5;
+  border-color: #555;
+}
+
+.dark-theme .navigation-buttons button:first-child {
+  background-color: #333;
+  color: #F5F5F5;
+}
+
+.dark-theme .navigation-buttons button:last-child {
+  background-color: #0056b3;
+}

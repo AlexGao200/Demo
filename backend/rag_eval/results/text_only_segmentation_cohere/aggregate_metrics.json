@@ -1,0 +1,17 @@
+{
+  "AnthropicProvider_claude-3-5-haiku-latest": {
+    "answer_relevancy": 1.0,
+    "faithfulness": 1.0,
+    "contextual_relevancy": 0.6077733860342556
+  },
+  "AnthropicProvider_claude-3-5-sonnet-latest": {
+    "answer_relevancy": 0.85,
+    "faithfulness": 1.0,
+    "contextual_relevancy": 0.4875357418007146
+  },
+  "AnthropicProvider_claude-3-opus-latest": {
+    "answer_relevancy": 0.9714285714285713,
+    "faithfulness": 0.95,
+    "contextual_relevancy": 0.2411111111111111
+  }
+}

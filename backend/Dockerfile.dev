@@ -1,0 +1,35 @@
+FROM python:3.12
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    POETRY_VERSION=1.8.3 \
+    POETRY_HOME="/opt/poetry" \
+    POETRY_VIRTUALENVS_CREATE=false \
+    POETRY_VIRTUALENVS_IN_PROJECT=true \
+    POETRY_NO_INTERACTION=1 \
+    PATH="/opt/poetry/bin:$PATH"
+
+RUN pip install poetry-plugin-export
+
+# Set working directory
+WORKDIR /app
+
+COPY ./poetry.lock ./poetry.lock
+COPY ./pyproject.toml ./pyproject.toml
+
+RUN poetry export -f requirements.txt --output requirements.txt
+
+RUN pip install -r requirements.txt
+
+RUN mkdir -p /app/tmp
+
+# Copy project files
+COPY . .
+
+# Install nltk and download the 'punkt' tokenizer (not punkt_tab)
+RUN python3 -m nltk.downloader punkt
+
+# Expose port 5000
+EXPOSE 5000
+
+ENTRYPOINT ["poetry", "run", "flask", "--app", "app.app:create_app", "run", "--host", "0.0.0.0", "--debug"]

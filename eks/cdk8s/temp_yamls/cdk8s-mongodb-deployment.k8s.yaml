@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cdk8s-mongodb-deployment-mongodb-deployment-c855d4bb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongodb
+  template:
+    metadata:
+      labels:
+        app: mongodb
+    spec:
+      containers:
+        - env:
+            - name: MONGO_INITDB_ROOT_USERNAME
+              value: acacetaAdmin
+            - name: MONGO_INITDB_ROOT_PASSWORD
+              value: Acaceta2024!
+          image: mongo:latest
+          name: mongodb
+          ports:
+            - containerPort: 27017

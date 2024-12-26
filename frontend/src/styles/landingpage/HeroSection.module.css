@@ -1,0 +1,185 @@
+.hero-section {
+    width: 93%;
+    position: relative;
+    background-color: #ffffff;
+    padding: 20px 20px;
+    z-index: 500;
+    min-height: 660px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    left: 3.5vw;
+  }
+
+  .hero-content {
+    position: relative;
+    width: 97vw;
+    height: 45vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: 1;
+  }
+
+  .hero-text {
+    font-size: 36px;
+    margin-bottom: -10px;
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    z-index: 3;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .hero-text h1 {
+    font-size: 4rem;  /* 64px default size */
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .hero-text h2 {
+    font-size: 3rem;  /* 48px default size */
+    line-height: 1.3;
+  }
+
+  /* Responsive styles */
+  @media (max-width: 1440px) {
+    .hero-text {
+      font-size: 32px;
+      bottom: 25px;
+      right: 25px;
+    }
+
+    .hero-text h1 {
+      font-size: 3.5rem;  /* 56px */
+    }
+
+    .hero-text h2 {
+      font-size: 2.75rem;  /* 44px */
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .hero-text {
+      font-size: 28px;
+      bottom: 20px;
+      right: 20px;
+      max-width: 85%;
+    }
+
+    .hero-section {
+      min-height: 540px;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;  /* 48px */
+    }
+
+    .hero-text h2 {
+      font-size: 2.25rem;  /* 36px */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-text {
+      font-size: 24px;
+      bottom: 15px;
+      right: 15px;
+      max-width: 90%;
+    }
+
+    .hero-section {
+      min-height: 440px;
+      padding: 15px 15px;
+    }
+
+    .hero-content {
+      width: 100vw;
+      height: 70vw;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;  /* 40px */
+    }
+
+    .hero-text h2 {
+      font-size: 2rem;  /* 32px */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-text {
+      font-size: 20px;
+      max-width: 95%;
+      padding: 8px;
+
+      /* Use Flexbox to center content */
+      display: flex;
+      flex-direction: column;
+      align-items: center;    /* Horizontally center */
+      justify-content: center; /* Vertically center */
+      text-align: center;     /* Ensure text is centered */
+
+      /* Adjust positioning if needed */
+      bottom: 0;
+      right: 0;
+      left: 0;
+      top: 10;
+      position: absolute;
+    }
+
+    .hero-section {
+      min-height: 340px;
+      padding: 0px 0px;
+      position: relative; /* Ensure parent is relative for absolute positioning */
+    }
+
+    .hero-content {
+      height: 80vw;
+    }
+
+    .hero-text h1 {
+      font-size: 2rem;  /* 32px */
+      margin-bottom: 55px;
+      text-align: center;  /* Center text */
+      margin-left: 35px;
+    }
+
+    .hero-text h2 {
+      display: none; /* Hides h2 on smaller screens */
+    }
+  }
+
+
+  @media (max-width: 360px) {
+    .hero-text {
+      font-size: 18px;
+      bottom: 8px;
+      padding: 6px;
+    }
+
+    .hero-section {
+      min-height: 280px;
+    }
+
+    .hero-text h1 {
+      font-size: 1.75rem;  /* 28px */
+      left: 20px;
+    }
+
+    .hero-text h2 {
+      font-size: 1.25rem;  /* 20px */
+    }
+  }

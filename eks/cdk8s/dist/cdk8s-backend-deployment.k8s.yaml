@@ -1,0 +1,93 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - image: 253490794427.dkr.ecr.us-west-1.amazonaws.com/backend:latest
+          imagePullPolicy: Always
+          name: backend
+          ports:
+            - containerPort: 5000
+          env:
+            - name: SECRET_KEY
+              value: "2e11e6bf97c15f96f943986852ec7c5e"
+            - name: ELASTICSEARCH_HOST
+              value: "cdk8s-elasticsearch-service-elasticsearch-service-c83bfbef"
+            - name: ELASTICSEARCH_PORT
+              value: "9200"
+            - name: ELASTICSEARCH_USER
+              value: "elastic"
+            - name: ELASTICSEARCH_PASSWORD
+              value: "z#]6]^a!w:mvEyXE-??n"
+            - name: MONGODB_URI
+              value: "mongodb+srv://Acaceta:Acaceta2024%21@acaceta.s044k.mongodb.net/test?retryWrites=true&w=majority&appName=Acaceta"
+            - name: AWS_SECRET_ACCESS_KEY
+              value: "oXT3ZcXsFZXU3C08FXZhsWnjW98h/vcNNXkDRluN"
+            - name: ANTHROPIC_API_KEY
+              value: "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"
+            - name: COHERE_API_KEY
+              value: "teUZOp4qnamaBGLruze4ceIme6VTdGoAQznutfw2"
+            - name: GROQ_API_KEY
+              value: "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"
+            - name: HUGGINGFACE_API_KEY
+              value: "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"
+            - name: HYPERBOLIC_API_KEY
+              value: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlbGFza3kyMDI0QGJlcmtlbGV5LmVkdSIsImlhdCI6MTcyNzMyNzYxMH0.e1aaiXox-xVZbsVqmFOSI8wsQex7750iv1AmnMYXqco"
+            - name: STRIPE_SECRET_KEY
+              value: "sk_test_51Q9VqARtAgEFTutZA0NfHigKtXGiC9Nwb2iN28kVv0Jtjp1PrNdo6qb90UY3hztqASVOeS80Y29BRZsi8tJPgFU800MH5U9tS4"
+            - name: TOGETHER_API_KEY
+              value: "368345e796a144690ec70eb930cdc861007efdbeb5caf744f0d14783970af43a"
+            - name: FLASK_ENV
+              value: "production"
+            - name: AWS_S3_THUMBNAIL_BUCKET_NAME
+              value: "acacetaaithumbnails"
+            - name: ALLOWED_ORIGINS
+              value: "http://af0971456cb2746be84e345974054aac-2004908522.us-west-1.elb.amazonaws.com"
+            - name: FRONTEND_BASE_URL
+              value: "http://af0971456cb2746be84e345974054aac-2004908522.us-west-1.elb.amazonaws.com"
+            - name: MDEFAULT_EMBEDDING_DIMS
+              value: "1024"
+            - name: REACT_APP_BACKEND_URL
+              value: "http://a12c502b02f1c4696a4f8549e63eb689-373224937.us-west-1.elb.amazonaws.com"
+            - name: AWS_ACCESS_KEY_ID
+              value: "AKIA34AMDKUBRUUBFCT5"
+            - name: S3_BUCKET_NAME
+              value: "acacetaai"
+            - name: AWS_S3_BUCKET_NAME
+              value: "acacetaai"
+            - name: AWS_REGION
+              value: "us-west-1"
+            - name: AWS_S3_HIGHLIGHTED_BUCKET_NAME
+              value: "acacetaaihighlightedpdfs"
+            - name: AWS_S3_PETITION_BUCKET_NAME
+              value: "acacetaaipetition"
+            - name: MAIL_SERVER
+              value: "smtp.hostinger.com"
+            - name: MAIL_PORT
+              value: "587"
+            - name: MAIL_USE_TLS
+              value: "true"
+            - name: MAIL_USE_SSL
+              value: "false"
+            - name: MAIL_USERNAME
+              value: "info@acaceta.com"
+            - name: MAIL_PASSWORD
+              value: "EthanandFrank1!"
+            - name: MAIL_DEFAULT_SENDER
+              value: "info@acaceta.com"
+            - name: STRIPE_WEBHOOK_SECRET
+              value: "whsec_PVznbwNLsyQ5cECaiizoAiiWUpa6W3Oq"
+            - name: REACT_APP_STRIPE_PUBLIC_KEY
+              value: "pk_test_51Q9VqARtAgEFTutZJUJ8aPli3sBs2OCriJjU9U4d3sgzmmxgCjZfprbP7tXkmzK2G7s78RewLdpc9YVhI3Jg7IK0000LJG7lvaR"
+            - name: TOGETHER_EMBEDDING_MODEL
+              value: "togethercomputer/m2-bert-80M-2k-retrieval"

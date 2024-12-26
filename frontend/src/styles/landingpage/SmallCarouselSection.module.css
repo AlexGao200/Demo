@@ -1,0 +1,87 @@
+.smallCarouselSection {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 40px 0;
+}
+
+.carouselWrapper {
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.smallCarousel {
+  position: relative;
+  background-color: #ffffff;
+  width: 100%;
+  overflow: hidden;
+}
+
+.smallCarouselTitle {
+  font-size: 28px;
+  color: #333;
+  text-align: left;
+  margin-bottom: 20px;
+  font-weight: 500;
+  padding-left: 20px;
+}
+
+.smallCarouselInner {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+}
+
+.smallCarouselInner::-webkit-scrollbar {
+  display: none;
+}
+
+.smallCarouselItem {
+  position: relative;
+  width: 380px;
+  flex: 0 0 380px;
+  aspect-ratio: 3/4;
+  scroll-snap-align: start;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .smallCarouselItem {
+    width: 90vw;
+    flex: 0 0 90vw;
+    padding: 10px;
+    margin: 0;
+    margin-right: 2px;
+  }
+
+  .smallCarouselInner {
+    gap: 0;
+    padding: 0;
+  }
+
+  .smallCarousel {
+    padding: 0;
+  }
+
+  .smallCarouselSection {
+    padding: 20px 0;
+  }
+
+  .carouselWrapper {
+    margin-bottom: 20px;
+  }
+
+  /* Remove any potential space that could show next slide */
+  .smallCarouselInner {
+    margin: 0;
+    width: 100vw;
+    left: 0;
+    right: 0;
+  }
+}

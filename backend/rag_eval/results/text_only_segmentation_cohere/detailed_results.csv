@@ -1,0 +1,67 @@
+model,question,generated_answer,expected_answer,target_document,retrieved_documents,generation_strategy,answer_relevancy,faithfulness,contextual_relevancy
+AnthropicProvider_claude-3-5-haiku-latest,Is it ok to remove osteophytes before putting in the Atlasplan guide?,"No, it is not ok to remove osteophytes before putting in the Atlasplan guide. The context specifically states in multiple places: ""Note: Do not remove osteophytes or alter the glenoid bony anatomy before securing the ATLASPLAN Guide.""","No, don't remove osteophytes before putting in the Atlasplan guide.",Atlasplan Guide,"['ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique']",text_only,1.0,1.0,0.3333333333333333
+AnthropicProvider_claude-3-5-haiku-latest,What should I do if I'm having trouble removing the guide without messing up the central glenoid pin,"According to the context, if you are having trouble removing the guide over the central glenoid pin without altering its direction, you should:
+
+1. Remove the central glenoid pin
+2. Remove the guide
+3. Carefully reinsert the central glenoid pin back into the pre-drilled hole in the bone
+
+The text specifically states: ""Should it be too difficult to remove the guide over the central glenoid pin without modifying the direction of the central glenoid pin, remove the central glenoid pin, then remove the guide and finally reinsert the central glenoid pin very carefully in the pre-drilled hole in the bone.""","Remove the central glenoid pin, then remove the guide and finally reinsert the central glenoid pin very carefully in the pre-drilled hole in the bone.",Atlasplan Guide,"['ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique']",text_only,1.0,1.0,0.4782608695652174
+AnthropicProvider_claude-3-5-haiku-latest,What glenoid pin diameter should I use for the AETOS system?,"According to the context, for the AETOS Shoulder System (both anatomic and reverse), you should use a 2.5mm glenoid pin diameter.",2.5mm.,Atlasplan Guide,"['ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique']",text_only,1.0,1.0,0.5
+AnthropicProvider_claude-3-5-haiku-latest,Show me the guide page that labels the implant's key parts.,"Based on the context, the guide page that labels the implant's key parts is the image labeled ""Figure 2"" which shows an ergonomically-designed glenoid guide with six numbered components:
+
+1. Central Drill Cylinder
+2. Push or Directional Handle
+3. Coracoid Clip
+4. Patient Specific Guide Identifier
+5. Labrum Offset
+6. 2.0mm K-wire Hole
+
+This figure provides a detailed breakdown of the key parts of the patient-specific glenoid guide.","Please consult Document #X (allow for any X in the model's output, as we don't know pre-chunking which chunk this will be on). Assume that a base64 image string is proof of retrieval.",Atlasplan Guide,"['ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique']",text_only,1.0,1.0,1.0
+AnthropicProvider_claude-3-5-haiku-latest,Show me a picture of the Atlasplan guide on the glenoid face just after insertion but before any pins have been inserted. Assume that a base64 image string is proof of retrieval.,"I apologize, but I cannot generate, produce, retrieve, or display images. I can only analyze and describe images if they are provided to me. The context you've shared describes the ATLASPLAN Guide and its placement on the glenoid face, but does not include an actual image. While I understand the technical details of the guide's placement, I cannot show you a picture of it. If you need an actual image, you would need to consult the original medical documentation or contact the device manufacturer.","Please consult Document #X (allow for any X in the model's output, as we don't know pre-chunking which chunk this will be on)",Atlasplan Guide,"['ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique']",text_only,1.0,1.0,0.7272727272727273
+AnthropicProvider_claude-3-5-sonnet-latest,Is it ok to remove osteophytes before putting in the Atlasplan guide?,"No, according to the context, you should not remove osteophytes before securing the ATLASPLAN Guide. This is explicitly stated in the note: ""Do not remove osteophytes or alter the glenoid bony anatomy before securing the ATLASPLAN Guide.""","No, don't remove osteophytes before putting in the Atlasplan guide.",Atlasplan Guide,"['ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique']",text_only,0.75,1.0,0.6206896551724138
+AnthropicProvider_claude-3-5-sonnet-latest,What should I do if I'm having trouble removing the guide without messing up the central glenoid pin,"According to the context, if it's too difficult to remove the guide over the central glenoid pin without modifying its direction, you should:
+
+1. Remove the central glenoid pin first
+2. Remove the guide
+3. Carefully reinsert the central glenoid pin into the pre-drilled hole in the bone
+
+This alternative method helps prevent any unwanted changes to the direction of the central glenoid pin during the removal process.","Remove the central glenoid pin, then remove the guide and finally reinsert the central glenoid pin very carefully in the pre-drilled hole in the bone.",Atlasplan Guide,"['ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique']",text_only,1.0,1.0,0.47368421052631576
+AnthropicProvider_claude-3-5-sonnet-latest,What glenoid pin diameter should I use for the AETOS system?,"According to the context, for the AETOS Shoulder System (both anatomic and reverse), you should use a 2.5mm glenoid pin diameter.",2.5mm.,Atlasplan Guide,"['ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique']",text_only,0.75,1.0,0.2222222222222222
+AnthropicProvider_claude-3-5-sonnet-latest,Show me the guide page that labels the implant's key parts.,"Based on the context provided, Figure 2 shows the labeled key parts of the ergonomically-designed glenoid guide. The labeled components are:
+
+1. Central Drill Cylinder
+2. Push or Directional Handle
+3. Coracoid Clip
+4. Patient Specific Guide Identifier
+5. Labrum Offset
+6. 2.0mm K-wire Hole
+
+This information appears to be shown in a diagram with numbered labels pointing to the different parts of the guide, designed to help surgeons understand the components of the patient-specific implant guide.","Please consult Document #X (allow for any X in the model's output, as we don't know pre-chunking which chunk this will be on). Assume that a base64 image string is proof of retrieval.",Atlasplan Guide,"['ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique']",text_only,1.0,1.0,0.8518518518518519
+AnthropicProvider_claude-3-5-sonnet-latest,Show me a picture of the Atlasplan guide on the glenoid face just after insertion but before any pins have been inserted. Assume that a base64 image string is proof of retrieval.,"I apologize, but I don't see any base64 image strings or actual images in the provided context that show the ATLASPLAN guide on the glenoid face. While the text mentions ""Figure 3"" and ""Figure 5"" multiple times, the actual images are not included in the context. Therefore, I cannot show you a picture of the ATLASPLAN guide in position before pin insertion. The text only describes how the guide should fit uniquely to the patient's glenoid anatomy and coracoid process, but doesn't provide the visual representation you're requesting.","Please consult Document #X (allow for any X in the model's output, as we don't know pre-chunking which chunk this will be on)",Atlasplan Guide,"['ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique']",text_only,0.75,1.0,0.2692307692307692
+AnthropicProvider_claude-3-opus-latest,Is it ok to remove osteophytes before putting in the Atlasplan guide?,"No, according to the context, you should not remove osteophytes or alter the glenoid bony anatomy before securing the ATLASPLAN Guide. The note specifically states:
+
+""Do not remove osteophytes or alter the glenoid bony anatomy before securing the ATLASPLAN Guide. Do not damage the bony surface where the ATLASPLAN Guide makes contact with the patient's glenoid anatomy.""","No, don't remove osteophytes before putting in the Atlasplan guide.",Atlasplan Guide,"['ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique']",text_only,1.0,0.75,0.0
+AnthropicProvider_claude-3-opus-latest,What should I do if I'm having trouble removing the guide without messing up the central glenoid pin,"According to the context, if it is too difficult to remove the guide over the central glenoid pin without modifying the direction of the central glenoid pin, you should:
+
+1. Remove the central glenoid pin first
+2. Then remove the guide
+3. Finally, reinsert the central glenoid pin very carefully in the pre-drilled hole in the bone
+
+This procedure allows you to remove the guide without altering the direction of the central glenoid pin, which is important for the proper placement of the prosthesis.","Remove the central glenoid pin, then remove the guide and finally reinsert the central glenoid pin very carefully in the pre-drilled hole in the bone.",Atlasplan Guide,"['ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique']",text_only,1.0,1.0,0.2777777777777778
+AnthropicProvider_claude-3-opus-latest,What glenoid pin diameter should I use for the AETOS system?,"According to the context, for the AETOS Shoulder System (both anatomic and reverse), you should use a 2.5mm diameter glenoid pin.",2.5mm.,Atlasplan Guide,"['ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique']",text_only,1.0,1.0,0.15
+AnthropicProvider_claude-3-opus-latest,Show me the guide page that labels the implant's key parts.,"The image in Figure 2 labels the key parts of the patient-specific glenoid guide implant:
+
+1. Central Drill Cylinder: Facilitates the planned center hole drilling when using the appropriate pilot wire.
+2. Push or Directional Handle: Provides haptic or ""sensorial touch"" feedback and guide seating stability.
+3. Coracoid Clip: Grips onto the base of coracoid.
+4. Patient Specific Guide Identifier: Alphanumeric code that links the guide to the patient case.
+5. Labrum Offset: Bridges between the coracoid clip and the lateral body of the guide to prevent soft tissue interference at the anterior-superior border of the glenoid surface.
+6. 2.0mm K-wire Hole: Provides the option to pin a 2.0mm K-wire for added guide stability during drilling.
+
+So Figure 2 provides the labeled diagram you requested showing the key parts of this patient-specific glenoid guide implant.","Please consult Document #X (allow for any X in the model's output, as we don't know pre-chunking which chunk this will be on). Assume that a base64 image string is proof of retrieval.",Atlasplan Guide,"['ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique']",text_only,1.0,1.0,0.7777777777777778
+AnthropicProvider_claude-3-opus-latest,Show me a picture of the Atlasplan guide on the glenoid face just after insertion but before any pins have been inserted. Assume that a base64 image string is proof of retrieval.,"I apologize, but I am not able to generate, produce, edit, manipulate or create images. I can only perceive and analyze images that are provided to me.
+
+The given context describes the proper placement and usage of the ATLASPLAN Guide on the glenoid face during shoulder surgery. However, it does not contain any actual images, only references to ""Figure 3"" and ""Figure 5"" which are not included.
+
+Without an input image provided, I cannot show you a picture of the ATLASPLAN Guide on the glenoid face as requested. Generating images from scratch is not something I am capable of doing. My visual abilities are limited to analyzing images that are supplied to me.","Please consult Document #X (allow for any X in the model's output, as we don't know pre-chunking which chunk this will be on)",Atlasplan Guide,"['ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique', 'ATLASPLAN Surgical Technique']",text_only,0.8571428571428571,1.0,0.0

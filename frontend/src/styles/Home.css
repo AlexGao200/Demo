@@ -1,0 +1,366 @@
+/* Define light and dark theme variables */
+:root {
+    --background-color: #F5F5F5;
+    --text-color: #333333;
+    --border-color: #CCCCCC;
+    --input-background-color: #FFFFFF;
+    --button-background-color: #1A1A1A;
+    --link-color: #1A1A1A;
+    --link-hover-background-color: #D5D5D5;
+    --chat-item-background-color: #FFFFFF;
+    --chat-item-border-color: #E0E0E0;
+    --chat-item-text-color: #4A4A4A;
+    --recent-chats-title-color: #30343F;
+    --filter-options-background-color: #FFFFFF;
+    --filter-options-text-color: #000000; /* Default black text */
+}
+
+[data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #F5F5F5;
+    --border-color: #444444;
+    --input-background-color: #333333;
+    --button-background-color: #F5F5F5;
+    --link-color: #F5F5F5;
+    --link-hover-background-color: #444444;
+    --chat-item-background-color: #333333;
+    --chat-item-border-color: #444444;
+    --chat-item-text-color: #F5F5F5;
+    --recent-chats-title-color: #F5F5F5;
+    --filter-options-background-color: #333333;
+    --filter-options-text-color: #F5F5F5; /* Ensure white text in dark mode */
+}
+
+/* Apply theme background color to body */
+body {
+    background-color: var(--background-color) !important; /* Force the background color */
+    color: var(--text-color) !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Higher specificity for container */
+body[data-theme="dark"] .home-container {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+}
+
+/* General styling */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.home-container .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding-top: 40px;
+    width: 100%;
+}
+
+.home-container .logoWrapper {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.home-container .logo {
+    width: 105px;
+    height: 105px;
+    display: block;
+    margin: 0 auto;
+}
+
+.home-container .logoTextWrapper {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.home-container .logoText {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.1em;
+}
+
+.home-container .greeting {
+    font-size: 32px;
+    margin-bottom: 80px;
+    color: var(--text-color);
+    font-weight: 300;
+    letter-spacing: -0.5px;
+}
+
+.home-container .inputContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 650px;
+    margin-bottom: 20px;
+}
+
+.home-container .queryInputContainer,
+.home-container .queryInputContainerNonLoggedIn {
+    position: relative;
+    width: 100%;
+}
+
+.home-container .queryInput,
+.home-container .queryInputNonLoggedIn {
+    width: 100%;
+    height: 50px;
+    padding: 10px 15px;
+    padding-left: 35px;
+    padding-right: 30px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    background-color: var(--input-background-color);
+    color: var(--text-color) !important;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home-container .arrowIcon,
+.home-container .arrowIconNonLoggedIn {
+    position: absolute;
+    right: 10px;
+    top: 42%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--text-color) !important;
+}
+
+.home-container .filterButton {
+    position: absolute !important;
+    left: 8px !important;
+    top: 17px !important; /* Adjust as needed */
+    background-color: transparent !important; /* Ensure background is transparent */
+    border: none !important; /* Remove border */
+    cursor: pointer !important;
+    width: 30px !important; /* Set a fixed width */
+    height: 30px !important; /* Set a fixed height */
+    padding: 0 !important; /* Remove padding */
+}
+
+.home-container .filterIcon {
+    width: 16px;
+    height: 16px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Filter options popup styling */
+.home-container .filterOptions {
+    position: absolute;
+    bottom: 110%;
+    left: 0;
+    transform: translateX(-105%);
+    background-color: var(--filter-options-background-color);
+    color: var(--filter-options-text-color) !important; /* Add !important to ensure the text color applies */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 3px;
+    z-index: 1000;
+    font-size: 12px;
+    width: 150px;
+    text-align: left;
+    height: 160px;
+    box-sizing: border-box;
+    padding-top: 5px;
+    margin-left: 158px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* Styles for dark theme */
+body[data-theme="dark"] .home-container .filterOptions {
+    background-color: var(--filter-options-background-color) !important;
+    color: var(--filter-options-text-color) !important; /* Ensure white text for dark theme */
+}
+
+.home-container .uploadLink {
+    color: var(--link-color);
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: text-decoration 0.3s ease;
+    text-align: center;
+}
+
+.home-container .uploadLink:hover {
+    text-decoration: underline;
+    background-color: var(--link-hover-background-color);
+}
+
+.home-container .recentChatsContainer {
+    margin-top: 100px;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.home-container .recentChatsTitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--recent-chats-title-color);
+    font-weight: 500;
+    letter-spacing: -0.5px;
+}
+
+.home-container .chatList {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    gap: 20px;
+}
+
+.home-container .chatItem {
+    flex: 1 1 30%;
+    padding: 30px;
+    background-color: var(--chat-item-background-color);
+    border: 1px solid var(--chat-item-border-color);
+    border-radius: 4px;
+    text-align: left;
+    font-size: 14px;
+    color: var(--chat-item-text-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.home-container .chatLink {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.home-container .description {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.home-container .uploadContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-container .customFileInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.home-container .hiddenFileInput {
+    display: none;
+}
+
+.home-container .uploadButton {
+    background-color: #ffffff; /* Change this to the desired background color */
+    padding: 5px 20px;
+    color: #212121; /* Text color */
+    border: .5px solid #212121; /* Optional: remove border */
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home-container .uploadButton:hover {
+    background-color: #0056b3; /* Change hover color */
+}
+
+
+.home-container .fileChosen {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.home-container .fileNameInput {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    background-color: var(--input-background-color);
+    color: var(--text-color);
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Add these media queries at the end of your existing CSS */
+
+/* First breakpoint: Hide logo when page height starts getting smaller */
+@media screen and (max-height: 800px) {
+    .home-container .logoContainer {
+        display: none;
+    }
+
+    .home-container .logoTextWrapper {
+        margin-top: 20px; /* Reduced margin since logo is hidden */
+    }
+
+    .home-container .content {
+        padding-top: 20px; /* Reduce top padding */
+    }
+
+    .home-container .greeting {
+        margin-bottom: 40px; /* Reduce bottom margin */
+    }
+}
+
+/* Second breakpoint: Hide recent conversations section when height is further reduced */
+@media screen and (max-height: 500px) {
+    .home-container .recentChatsContainer {
+        display: none;
+    }
+
+    .home-container .content {
+        padding-top: 10px; /* Further reduce top padding */
+    }
+
+    .home-container .greeting {
+        margin-bottom: 30px; /* Further reduce margin */
+        font-size: 28px; /* Slightly smaller greeting text */
+    }
+}
+
+/* Additional optimizations for very small heights */
+@media screen and (max-height: 400px) {
+    .home-container .logoText {
+        font-size: 28px; /* Smaller logo text */
+    }
+
+    .home-container .greeting {
+        font-size: 24px; /* Even smaller greeting */
+        margin-bottom: 20px;
+    }
+
+    .home-container .inputContainer {
+        margin-bottom: 10px;
+    }
+}

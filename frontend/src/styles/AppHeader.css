@@ -1,0 +1,237 @@
+@import url('./AppColors.css');
+
+.app-header {
+    background-color: var(--light-bg);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 70px;
+}
+
+.app-header-left {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.app-header-center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.app-header-right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.app-center-home {
+    font-size: 18px;
+    color: var(--light-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.app-center-home:hover {
+    color: var(--primary-color);
+}
+
+.app-back-link {
+    display: flex;
+    align-items: center;
+    color: var(--light-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-right: 53px;
+}
+
+.app-back-icon {
+    margin-right: 5px;
+}
+
+.app-header .app-header-right .app-sidebar-toggle-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 4px;
+    margin-left: 6px;
+    height: 36px;
+}
+
+.app-header .app-header-right .app-sidebar-toggle-button svg {
+    height: 22px;
+    width: auto;
+    padding-left: 5px;
+}
+
+.app-header-title {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--light-text);
+    transition: color 0.3s ease;
+    height: 100%;
+    font-weight: 500;
+}
+
+.app-logo-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: -10px;
+    margin-top: 30px;
+}
+
+.app-logo-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1px;
+    margin-bottom: 30px;
+}
+
+.app-logo {
+    height: 40px !important;
+    width: auto;
+    object-fit: contain;
+}
+
+.app-title-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--light-text);
+    margin-bottom: 30px;
+    margin-left: 15px;
+}
+
+.app-header-title h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 450;
+    letter-spacing: .35px;
+    line-height: 40px;
+}
+
+.app-header-actions {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.app-theme-toggle-switch {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.app-theme-toggle-switch:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.app-theme-icon {
+    color: var(--light-text);
+    transition: color 0.3s ease;
+}
+
+.app-logout-button, .app-login-link, .app-register-link {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--light-text);
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.app-logout-button {
+    padding-right: 15px;
+}
+
+.app-logout-button:hover, .app-login-link:hover, .app-register-link:hover {
+    color: var(--primary-color);
+}
+
+.app-header.dark-mode {
+    background-color: var(--dark-bg);
+    border-bottom-color: var(--dark-border-color);
+}
+
+.app-header.dark-mode .app-theme-icon,
+.app-header.dark-mode .app-header-title h1,
+.app-header.dark-mode .app-back-link,
+.app-header.dark-mode .app-logout-button,
+.app-header.dark-mode .app-login-link,
+.app-header.dark-mode .app-register-link {
+    color: var(--dark-text);
+}
+
+.app-header.dark-mode .app-logout-button:hover,
+.app-header.dark-mode .app-login-link:hover,
+.app-header.dark-mode .app-register-link:hover {
+    color: var(--primary-hover-color);
+}
+
+.app-header.dark-mode .app-theme-toggle-switch:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .app-header {
+        padding: 10px 20px;
+    }
+
+    .app-header-left, .app-header-right {
+        width: auto;
+    }
+
+    .app-header-left {
+        margin-bottom: 0;
+    }
+
+    .app-header-center {
+        width: auto;
+        margin-bottom: 0;
+        flex-grow: 1;
+    }
+
+    .app-logo {
+        height: 30px;
+    }
+
+    .app-header-title h1 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 480px){
+    .app-header-center{
+        display: none
+    }
+}

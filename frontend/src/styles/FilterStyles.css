@@ -1,0 +1,145 @@
+/* FilterStyles.css */
+
+.filter-container {
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+  }
+
+  .filter-header {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .filter-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filter-input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .filter-input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    width: 95%;
+  }
+
+  .filter-button {
+    padding: 10px;
+    background-color: transparent !important;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; /* Make buttons take full width */
+    max-width: 200px; /* Optional: You can control the max width if buttons are too large */
+    margin: 10px 0; /* Adjust spacing between buttons */
+    text-align: center; /* Ensure button text is centered */
+
+  }
+
+  /* Selected filter button */
+  .selected-filter-button {
+    background-color: #cecdcd !important; /* Light grey background for selected filters */
+    border: .25px solid #212121 !important;
+  }
+
+  .filter-button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensure buttons are centered */
+    width: 100%; /* Take up the full width of the modal */
+  }
+
+  /* Light theme styles */
+  .light-theme .filter-container {
+    background-color: #F5F5F5;
+    color: #333;
+  }
+
+  .light-theme .filter-input {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+  }
+
+  .light-theme .filter-button {
+    color: #212121 !important;
+    border: .25px solid #212121 !important;
+  }
+
+  /* Dark theme styles */
+  .dark-theme .filter-container {
+    background-color: #1A1A1A;
+    color: #F5F5F5;
+  }
+
+  .dark-theme .filter-input {
+    border: .25px solid #555;
+    background-color: #333;
+    color: #F5F5F5;
+  }
+
+  .dark-theme .filter-button {
+    color: #F5F5F5 !important;
+    border: .25px solid #212121 !important;
+  }
+
+  /* Navigation button styles */
+  .navigation-buttons .nav-back-button,
+  .navigation-buttons .nav-continue-button {
+    padding: 7px;
+    background-color: transparent !important;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    max-width: 200px;
+    margin: 10px 0;
+    text-align: center;
+    border: .25px solid #212121 !important;
+  }
+
+  .navigation-buttons .nav-back-button:hover,
+  .navigation-buttons .nav-continue-button:hover {
+    background-color: #e8e8e8 !important;
+  }
+
+  /* Light theme specific styles for navigation buttons */
+  .light-theme .navigation-buttons .nav-back-button,
+  .light-theme .navigation-buttons .nav-continue-button {
+    color: #212121 !important;
+    border: .25px solid #212121 !important;
+  }
+
+  /* Dark theme specific styles for navigation buttons */
+  .dark-theme .navigation-buttons .nav-back-button,
+  .dark-theme .navigation-buttons .nav-continue-button {
+    color: #F5F5F5 !important;
+    border: .25px solid #212121 !important;
+  }
+
+  /* Ensure the continue button always has a transparent background */
+  .navigation-buttons .nav-continue-button {
+    background-color: transparet !important;
+  }
+
+  /* Override global button styles */
+  .navigation-buttons button {
+    background-color: transparent !important;
+    color: inherit !important;
+    border: .25px solid #212121 !important;
+  }

@@ -1,0 +1,107 @@
+.area-selector-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.area-selector-header {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.loading-text,
+.no-values-text {
+  color: #666;
+  font-style: italic;
+}
+
+.area-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  max-height: 200px; /* Limit the height */
+  overflow-y: auto; /* Enable scrolling */
+  padding: 10px;
+}
+
+.area-list-item {
+  margin-bottom: 10px;
+}
+
+.area-checkbox {
+  margin-right: 10px;
+  transform: scale(1.2); /* Slightly enlarge checkboxes */
+}
+
+/* Container for buttons */
+.button-container {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center;
+}
+
+/* Add Value Button */
+.add-value-button {
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  max-width: 200px;
+  margin: 10px 0;
+  text-align: center;
+  border: 1px solid;
+}
+
+/* Submit Button */
+.submit-button {
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  max-width: 200px;
+  margin: 10px 0;
+  text-align: center;
+  border: 1px solid;
+}
+
+/* Light theme */
+.light-theme .area-selector-container {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.light-theme .add-value-button,
+.light-theme .submit-button {
+  color: #212121;
+  border-color: #212121;
+}
+
+/* Dark theme */
+.dark-theme .area-selector-container {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+}
+
+.dark-theme .add-value-button,
+.dark-theme .submit-button {
+  color: #BB0000;
+  border-color: #BB0000;
+}

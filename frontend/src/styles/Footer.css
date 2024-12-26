@@ -1,0 +1,68 @@
+.footer {
+    background-color: #eee;
+    padding: 20px 20px; /* Adjust the top padding to 20px */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensure the footer spans the full width */
+    box-sizing: border-box; /* Include padding in the element's width */
+    margin-top: 0; /* Remove any additional margin at the top of the footer */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Use space-between to spread columns evenly */
+    width: 100%; /* Ensure the container spans the full width of the footer */
+    max-width: 100%; /* Remove the max-width constraint */
+    padding: 0 20px; /* Add padding to create space at the edges */
+    box-sizing: border-box; /* Include padding in the element's width */
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0 20px;
+    min-width: 200px; /* Ensures columns stack on smaller screens */
+}
+
+.footer-column h4 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #444;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #444;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #00aaff;
+}
+
+.footer-bottom {
+    margin-top: 10px; /* Reduced top margin to 10px */
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid #444;
+    padding-top: 10px; /* Reduced top padding to 10px */
+    box-sizing: border-box; /* Include padding in the element's width */
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 7px;
+    margin-top: 15px;
+}

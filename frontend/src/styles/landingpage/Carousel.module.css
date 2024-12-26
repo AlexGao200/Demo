@@ -1,0 +1,145 @@
+.smallCarousel {
+  position: relative;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 0px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.smallCarouselTitle {
+  font-size: 28px;
+  color: #333;
+  text-align: left;
+  margin-bottom: 20px;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.smallCarouselInner {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+  border-radius: 0px;
+  width: 100%;
+  padding: 10px 0;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+}
+
+.smallCarouselInner::-webkit-scrollbar {
+  display: none;
+}
+
+.smallCarouselItem {
+  position: relative;
+  flex: 0 0 470px;
+  width: 380px;
+  padding-top: calc(380px * 1.33); /* This creates 3:4 aspect ratio */
+  scroll-snap-align: start;
+  border-radius: 10px;
+}
+
+.smallCarouselImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.smallCarouselText {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 22px;
+  z-index: 2;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  max-width: 85%;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.carouselControl {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.carouselControlPrev {
+  composes: carouselControl;
+  left: 10px;
+}
+
+.carouselControlNext {
+  composes: carouselControl;
+  right: 10px;
+}
+
+.carouselControl:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive styles */
+/* Keep all base styles the same, only updating the media queries */
+
+@media (max-width: 480px) {
+  .smallCarousel {
+    padding: 20px;
+    overflow: hidden;  /* Ensure no scrolling */
+  }
+
+  .smallCarouselTitle {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .smallCarouselInner {
+    gap: 20px;
+    padding: 0 10px;
+    overflow-x: auto;
+    overflow-y: hidden;  /* Prevent vertical scrolling */
+  }
+
+  .smallCarouselItem {
+    flex: 0 0 calc(100vw - 60px);
+    width: calc(100vw - 60px);
+    padding-top: calc((100vw - 60px) * 1.33);  /* Back to padding method */
+    position: relative;
+  }
+
+  .smallCarouselImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .smallCarouselText {
+    font-size: 16px;
+    bottom: 10px;
+    left: 10px;
+    padding: 8px;
+  }
+}

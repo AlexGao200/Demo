@@ -1,0 +1,145 @@
+/* Define light and dark theme variables */
+:root {
+  --background-color-light: #F5F5F5;
+  --text-color-light: #333333;
+  --background-color-dark: #1A1A1A;
+  --text-color-dark: #F5F5F5;
+  --card-background-light: transparent; /* Transparent card background */
+  --card-background-dark: transparent; /* Transparent card background for dark mode */
+  --card-border-color-light: #E0E0E0;
+  --card-border-color-dark: #555555;
+}
+
+/* Base styles */
+.organization-dashboard {
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding-top: 60px;
+  min-height: 100vh;
+}
+
+/* Light theme */
+.organization-dashboard.light {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+}
+
+.organization-dashboard.light .dashboard-title {
+  color: var(--text-color-light);
+}
+
+/* Dark theme */
+.organization-dashboard.dark {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+.organization-dashboard.dark .dashboard-title {
+  color: var(--text-color-dark);
+}
+
+/* General styling */
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.message-count {
+  margin-bottom: 40px;
+}
+
+/* Flex container for permissions and invite side by side without container background */
+.permissions-invite-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Each component in the flex container */
+.permissions-container,
+.invite-user-container {
+  flex: 1;
+  border: 1px solid var(--card-border-color-light); /* Add border but no background color */
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.3s ease;
+  min-height: 400px; /* Ensure the components have a minimum height */
+}
+
+/* Dark mode border adjustment */
+.organization-dashboard.dark .permissions-container,
+.organization-dashboard.dark .invite-user-container {
+  border-color: var(--card-border-color-dark);
+}
+
+/* Ensure both components have the same height */
+.permissions-container,
+.invite-user-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* User Actions Log specific */
+.user-actions-log-container {
+  max-height: 250px;
+  overflow-y: auto; /* Scroll only for entries */
+  border: 1px solid var(--card-border-color-light);
+}
+
+.user-actions-log-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-actions-log-container th,
+.user-actions-log-container td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid var(--card-border-color-light);
+}
+
+/* Ensure header stays fixed while the content scrolls */
+.user-actions-log-container thead {
+  position: sticky;
+  top: 0;
+  background-color: var(--card-background-light);
+  z-index: 1;
+}
+
+/* Ellipsis for long document URLs */
+.user-actions-log-container td a {
+  display: inline-block;
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-actions-log-container td {
+  text-align: left;
+}
+
+.invite-user {
+  margin-top: 20px;
+}
+
+
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .permissions-invite-container {
+    flex-direction: column;
+  }
+
+  .permissions-container,
+  .invite-user-container {
+    min-width: 100%; /* Take full width */
+    margin-bottom: 20px;
+  }
+}

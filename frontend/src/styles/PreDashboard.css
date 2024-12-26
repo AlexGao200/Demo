@@ -1,0 +1,92 @@
+/* Define light and dark theme variables */
+:root {
+    --background-light: #f5f5f5;
+    --text-light: #333;
+    --background-dark: #1a1a1a;
+    --text-dark: #f5f5f5;
+    --error-color-light: #ff0000;
+    --error-color-dark: #ff6666;
+    --list-background-light: #ffffff;
+    --list-background-dark: #333333;
+    --list-hover-light: #dcdcdc;
+    --list-hover-dark: #444444;
+}
+
+/* PreDashboard container */
+.pre-dashboard-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light theme */
+.pre-dashboard-container.light {
+    background-color: var(--background-light);
+    color: var(--text-light);
+}
+
+.pre-dashboard-container.light .pre-dashboard-error {
+    color: var(--error-color-light);
+}
+
+.pre-dashboard-container.light .pre-dashboard-item {
+    background-color: var(--list-background-light);
+    color: var(--text-light);
+}
+
+.pre-dashboard-container.light .pre-dashboard-item:hover {
+    background-color: var(--list-hover-light);
+}
+
+/* Dark theme */
+.pre-dashboard-container.dark {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+.pre-dashboard-container.dark .pre-dashboard-error {
+    color: var(--error-color-dark);
+}
+
+.pre-dashboard-container.dark .pre-dashboard-item {
+    background-color: var(--list-background-dark);
+    color: var(--text-dark);
+}
+
+.pre-dashboard-container.dark .pre-dashboard-item:hover {
+    background-color: var(--list-hover-dark);
+}
+
+/* General styling */
+.pre-dashboard-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.pre-dashboard-error {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.pre-dashboard-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+.pre-dashboard-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid transparent;
+}

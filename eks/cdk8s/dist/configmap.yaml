@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+data:
+  ELASTICSEARCH_HOST: "cdk8s-elasticsearch-service-elasticsearch-service-c83bfbef"
+  ELASTICSEARCH_PORT: "9200"
+  FRONTEND_BASE_URL: "http://af0971456cb2746be84e345974054aac-2004908522.us-west-1.elb.amazonaws.com"
+  MDEFAULT_EMBEDDING_DIMS: "1024"
+  ELASTICSEARCH_SERVICE_HOST: "cdk8s-elasticsearch-service-elasticsearch-service-c83bfbef"
+  REACT_APP_BACKEND_URL: "http://a12c502b02f1c4696a4f8549e63eb689-373224937.us-west-1.elb.amazonaws.com"
+  AWS_ACCESS_KEY_ID: "AKIA34AMDKUBRUUBFCT5"
+  S3_BUCKET_NAME: "acacetaai"
+  AWS_S3_BUCKET_NAME: "acacetaai"
+  AWS_REGION: "us-west-1"
+  AWS_S3_HIGHLIGHTED_BUCKET_NAME: "acacetaaihighlightedpdfs"
+  AWS_S3_PETITION_BUCKET_NAME: "acacetaaipetition"
+  MAIL_SERVER: "smtp.hostinger.com"
+  MAIL_PORT: "587"
+  MAIL_USE_TLS: "true"
+  MAIL_USE_SSL: "false"
+  MAIL_USERNAME: "info@acaceta.com"
+  MAIL_PASSWORD: "EthanandFrank1!"
+  MAIL_DEFAULT_SENDER: "info@acaceta.com"
+  ALLOWED_ORIGINS: "http://af0971456cb2746be84e345974054aac-2004908522.us-west-1.elb.amazonaws.com"
+  STRIPE_WEBHOOK_SECRET: "whsec_PVznbwNLsyQ5cECaiizoAiiWUpa6W3Oq"
+  REACT_APP_STRIPE_PUBLIC_KEY: "pk_test_51Q9VqARtAgEFTutZJUJ8aPli3sBs2OCriJjU9U4d3sgzmmxgCjZfprbP7tXkmzK2G7s78RewLdpc9YVhI3Jg7IK0000LJG7lvaR"
+  TOGETHER_EMBEDDING_MODEL: "togethercomputer/m2-bert-80M-2k-retrieval"

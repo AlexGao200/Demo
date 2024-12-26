@@ -1,0 +1,54 @@
+.add-category-container {
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .add-category-header {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .add-category-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .add-category-button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .add-category-button:hover {
+    background-color: #0056b3;
+  }
+
+  .error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+    font-style: italic;
+  }
+
+  /* Light theme */
+  .light-theme .add-category-container {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+
+  /* Dark theme */
+  .dark-theme .add-category-container {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+  }

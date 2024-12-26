@@ -1,0 +1,81 @@
+.indices-selector-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.indices-search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.select-all-container {
+  margin-bottom: 15px;
+}
+
+.indices-list-scrollable {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.indices-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.indices-list-item {
+  margin-bottom: 8px;
+}
+
+.indices-list-item label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+}
+
+.indices-list-item input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+.indices-list-item em {
+  margin-left: auto;
+  font-style: normal;
+  color: #666;
+}
+
+/* Light theme styles */
+.light-theme .indices-selector-container {
+  background-color: #FFFFFF;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+/* Dark theme styles */
+.dark-theme .indices-selector-container {
+  background-color: #121212;
+  color: #F5F5F5;
+  border: 1px solid #ccc;
+}
+
+.dark-theme .indices-list-item em {
+  color: #999;
+
+}
+
+.dark-theme .navigation-buttons {
+
+}

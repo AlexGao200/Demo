@@ -1,0 +1,128 @@
+/* Define light and dark theme variables */
+:root {
+    --background-light: #f5f5f5;
+    --text-light: #333;
+    --input-background-light: #fff;
+    --input-border-light: #ccc;
+    --button-background-light: #800000;
+    --button-text-light: #fff;
+    --error-text-light: #800000;
+
+    --background-dark: #1a1a1a;
+    --text-dark: #f5f5f5;
+    --input-background-dark: #333;
+    --input-border-dark: #444;
+    --button-background-dark: #888;
+    --button-text-dark: #fff;
+    --error-text-dark: #ff6666;
+  }
+
+  /* General styling for register container */
+  .register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  /* Light theme */
+  .register-container.light {
+    background-color: var(--background-light);
+    color: var(--text-light);
+  }
+
+  .register-container.light .input {
+    background-color: var(--input-background-light);
+    color: var(--text-light);
+    border: 1px solid var(--input-border-light);
+  }
+
+  .register-container.light .register-button {
+    background-color: var(--button-background-light);
+    color: var(--button-text-light);
+  }
+
+  .register-container.light .register-error {
+    color: var(--error-text-light);
+  }
+
+  /* Dark theme */
+  .register-container.dark {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+  }
+
+  .register-container.dark .input {
+    background-color: var(--input-background-dark);
+    color: var(--text-dark);
+    border: 1px solid var(--input-border-dark);
+  }
+
+  .register-container.dark .register-button {
+    background-color: var(--button-background-dark);
+    color: var(--button-text-dark);
+  }
+
+  .register-container.dark .register-error {
+    color: var(--error-text-dark);
+  }
+
+  /* Common styling */
+  .register-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 30px;
+    background-color: var(--input-background-light); /* Default background */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .register-header {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  .input-group {
+    margin-bottom: 20px;
+  }
+
+  .label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  .register-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .login-link-container {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .login-link {
+    color: #800000;
+    text-decoration: none;
+  }
+
+  .register-error {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }

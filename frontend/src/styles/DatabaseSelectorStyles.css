@@ -1,0 +1,107 @@
+.filter-container {
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+.filter-header {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.filter-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.filter-input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    width: 95%;
+}
+
+.filter-button {
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; /* Make buttons take full width */
+    max-width: 200px; /* Optional: You can control the max width if buttons are too large */
+    margin: 10px 0; /* Adjust spacing between buttons */
+    text-align: center; /* Ensure button text is centered */
+    transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+.filter-button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensure buttons are centered */
+    width: 100%; /* Take up the full width of the modal */
+}
+
+/* Light theme styles */
+.light-theme .filter-container {
+    background-color: #F5F5F5;
+    color: #333;
+}
+
+.light-theme .filter-input {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+}
+
+.light-theme .filter-button {
+    color: #212121;
+    border: 1px solid #212121;
+}
+
+.light-theme .filter-button.selected {
+    background-color: #e8e8e8; /* Light grey background for selected buttons */
+    color: #000;
+}
+
+/* Done button with additional margin */
+.done-button {
+    margin-top: 20px; /* Add extra margin at the top */
+    padding: 7px;
+}
+
+/* Dark theme styles */
+.dark-theme .filter-container {
+    background-color: #1A1A1A;
+    color: #F5F5F5;
+}
+
+.dark-theme .filter-input {
+    border: 1px solid #555;
+    background-color: #333;
+    color: #F5F5F5;
+}
+
+.dark-theme .filter-button {
+    color: #BB0000;
+    border: 1px solid #BB0000;
+}
+
+.dark-theme .filter-button.selected {
+    background-color: #888888; /* Darker grey for dark theme selected state */
+    color: #FFF;
+}

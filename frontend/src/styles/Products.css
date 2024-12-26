@@ -1,0 +1,127 @@
+/* Base page structure */
+.page-container {
+    min-height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top:150px;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Products specific styles */
+.products-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.products-title {
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+    color: var(--text-color);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background-color: var(--chat-item-background-color);
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid var(--chat-item-border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-name {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.product-details {
+    margin-bottom: 20px;
+}
+
+.product-price {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.currency {
+    font-size: 14px;
+    color: var(--chat-item-text-color);
+}
+
+.product-billing {
+    font-size: 12px;
+    color: var(--chat-item-text-color);
+}
+
+.subscribe-button {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--button-text-color, #FFFFFF);
+    background-color: var(--button-background-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.subscribe-button:hover:not(:disabled) {
+    opacity: 0.9;
+}
+
+.subscribe-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.products-loading,
+.products-error,
+.redirect-message {
+    text-align: center;
+    padding: 40px;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.products-error {
+    color: #dc3545;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .page-content {
+        padding: 20px;
+    }
+}

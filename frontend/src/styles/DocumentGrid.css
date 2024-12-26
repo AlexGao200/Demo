@@ -1,0 +1,377 @@
+/* Document grid container */
+.document-grid-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1400px;
+    position: relative;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Ungrouped document styles */
+.ungrouped-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+.ungrouped-document-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+    margin-top:75px;
+}
+
+.ungrouped-document-cell {
+    display: flex;
+    justify-content: center;
+}
+
+/* Grouped document styles */
+.grouped-document-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.grouped-document-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #333;
+    padding: 5px;
+}
+
+.grouped-document-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 50px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.grouped-document-row::-webkit-scrollbar {
+    display: none;
+}
+
+/* Common document item styles */
+.documentItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 10px 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 390px;
+    min-height: 570px;
+}
+
+.grouped-document-row .documentItem {
+    flex-shrink: 0;
+}
+
+.sort-dropdown-container {
+    position: absolute;
+    top: -10;
+    right: 30px;
+    z-index: 10;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    z-index: 1;
+}
+
+.sort-dropdown-container label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #212121;
+    letter-spacing: 0.6px;
+}
+
+.sort-dropdown-container select {
+    padding: 10px 10px;
+    background-color: #ffffff;
+    color: #212121;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.sort-dropdown-container option {
+    font-size: 14px;
+    color: #212121;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.documentItemContent {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.documentPreview {
+    width: 60%;
+    max-height: 44%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    image-rendering: -webkit-optimize-contrast;
+    backface-visibility: hidden;
+    transform: scale(1.00001);
+}
+
+.documentTitle {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 0;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 88%;
+}
+
+.uploadType {
+    font-size: 14px;
+}
+
+.organizationName {
+    font-size: 15px;
+}
+
+.documentMeta {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0 2px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Button styles */
+.buttonContainer {
+    width: 80%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.documentButton.viewButton {
+    width: 74%;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #212121;
+    border-radius: 4px;
+    color: #212121;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.documentButton.viewButton:hover {
+    background-color: #f0f0f0;
+}
+
+.buttonContainerBottom {
+    display: flex;
+    justify-content: space-between;
+    width: 74%;
+    margin: 0 auto;
+}
+
+.documentButton.downloadButton,
+.documentButton.documentDeletion {
+    width: 44%;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #212121;
+    border-radius: 4px;
+    color: #212121;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.documentButton.deleteButton {
+    width: 44%;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #212121;
+    border-radius: 4px;
+    color: #970202;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.documentButton.deleteButton:hover,
+.documentButton.downloadButton:hover,
+.documentButton.documentDeletion:hover {
+    background-color: #f0f0f0;
+}
+
+.documentButton.downloadButton a {
+    color: #4089f6;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: normal;
+}
+
+.documentButton {
+    color: #3f69db;
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    margin-top: 1px;
+}
+
+.documentButton.documentDeletion {
+    font-size: 8px;
+    color: #de0000;
+}
+
+.downloadButton a {
+    color: #3f69db;
+    text-decoration: none;
+}
+
+.databaseType {
+    font-size: 12px;
+    color: #555;
+    margin-top: 5px;
+}
+
+.noDocuments {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+/* Dark mode styles */
+.dark-mode .documentItem {
+    background-color: #333333;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .documentTitle,
+.dark-mode .documentMeta,
+.dark-mode .uploadType,
+.dark-mode .organizationName,
+.dark-mode .grouped-document-title {
+    color: #f5f5f5;
+}
+
+.dark-mode .documentButton.viewButton,
+.dark-mode .documentButton.downloadButton,
+.dark-mode .documentButton.documentDeletion {
+    background-color: #444444;
+    color: #f5f5f5;
+    border-color: #555555;
+}
+
+.dark-mode .documentButton.viewButton:hover,
+.dark-mode .documentButton.downloadButton:hover,
+.dark-mode .documentButton.documentDeletion:hover {
+    background-color: #555555;
+}
+
+.dark-mode .documentButton.deleteButton {
+    background-color: #444444;
+    color: #ff6b6b;
+    border-color: #555555;
+}
+
+.dark-mode .documentButton.deleteButton:hover {
+    background-color: #555555;
+}
+
+.dark-mode .noDocuments {
+    color: #aaaaaa;
+}
+
+/* Responsive Design */
+@media (max-width: 1600px) {
+    .document-grid-container {
+        max-width: 1300px;
+    }
+}
+
+.sort-dropdown-container{
+    margin-right: -5px;
+
+}
+
+@media (max-width: 1300px) {
+    .document-grid-container {
+        max-width: 900px;
+    }
+
+    .ungrouped-document-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sort-dropdown-container{
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 900px) {
+    .document-grid-container {
+        max-width: 600px;
+        padding: 0 10px;
+    }
+
+    .ungrouped-document-row {
+        grid-template-columns: 1fr;
+    }
+
+    .documentItem {
+        width: 100%;
+        max-width: 390px;
+    }
+
+    .sort-dropdown-container{
+        margin-right: 180px;
+    }
+}
+
+@media (max-width: 540px) {
+    .document-grid-container {
+        padding: 0 10px;
+    }
+
+    .documentItem {
+        min-height: 500px;
+    }
+
+    .grouped-document-row {
+        gap: 40px;
+    }
+}

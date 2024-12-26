@@ -1,0 +1,66 @@
+name: acaceta-eval
+
+services:
+  evaluator:
+    build:
+      context: backend
+      dockerfile: rag_eval/Dockerfile
+    env_file:
+      - backend/rag_eval/.env.eval
+    environment:
+      - ELASTICSEARCH_HOST=elasticsearch-rag-eval
+      - ELASTICSEARCH_PORT=9200
+      - ELASTICSEARCH_USER=${ELASTICSEARCH_USER}
+      - ELASTICSEARCH_PASSWORD=${ELASTICSEARCH_PASSWORD}
+      - ELASTICSEARCH_USE_SSL=${ELASTICSEARCH_USE_SSL}
+      - ELASTICSEARCH_VERIFY_CERTS=${ELASTICSEARCH_VERIFY_CERTS}
+      - ELASTICSEARCH_USE_AUTH=${ELASTICSEARCH_USE_AUTH}
+      - RAG_EVAL_STRATEGIES=${RAG_EVAL_STRATEGIES:-}
+      - RAG_EVAL_MODELS=${RAG_EVAL_MODELS:-}
+    volumes:
+      - ./backend:/app
+    tmpfs:
+      - /tmp  # Add tmpfs for temporary files
+    depends_on:
+      - elasticsearch-rag-eval
+    networks:
+      - acaceta-eval-network
+    healthcheck:
+      test: ["CMD", "python", "-c", "import sys; sys.exit(0)"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  elasticsearch-rag-eval:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.15.0
+    container_name: elasticsearch-rag-eval
+    env_file:
+      - backend/rag_eval/.env.eval
+    environment:
+      - cluster.name=docker-cluster-eval
+      - bootstrap.memory_lock=true
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - xpack.security.http.ssl.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"  # Reduced memory footprint
+      - network.host=0.0.0.0
+      - ELASTICSEARCH_PASSWORD=z#]6]^a!w:mvEyXE-??n
+    networks:
+      - acaceta-eval-network
+    volumes:
+      - elasticsearch_eval_data:/usr/share/elasticsearch/data
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27018:27017"  # Different port for test environment
+    networks:
+      - acaceta-eval-network
+
+volumes:
+  elasticsearch_eval_data:
+
+networks:
+  acaceta-eval-network:
+    driver: bridge
